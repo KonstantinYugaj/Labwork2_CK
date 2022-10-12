@@ -12,3 +12,4 @@ struct uint2022_t {
         }
        
     }
+ friend std::ostream& operator<<(std::ostream&, const uint2022_t&);
