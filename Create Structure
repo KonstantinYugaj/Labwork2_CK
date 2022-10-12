@@ -1,0 +1,14 @@
+struct uint2022_t {
+    char charpool[609];
+    unsigned char binpool[253];
+
+    uint2022_t() {
+        for (int i = 0; i < 609; i++) {
+            charpool[i] = 0; 
+            
+        }
+        for (int i = 0; i < 253; i++) {
+            binpool[i] = 0;
+        }
+       
+    }
