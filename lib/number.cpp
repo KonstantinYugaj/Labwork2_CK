@@ -122,6 +122,19 @@ bool operator!=(const uint2022_t& lhs, const uint2022_t& rhs) {
     return false;
 }
 
+uint2022_t from_uint(uint32_t i) {
+    uint2022_t number;
+    number.digits.reserve(70);
+    while (true) {
+        number.digits.push_back(i % base);
+        i /= base;
+        if (i == 0) {
+            break;
+        }
+    }
+    return number;
+}
+
 std::ostream& operator<<(std::ostream& stream, const uint2022_t& value) {
     stream << "Implement me";
 
